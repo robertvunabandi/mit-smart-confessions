@@ -11,7 +11,8 @@
     "start": "yarn build && yarn run-server",
     "run-server": "node ./bin/www",
     "start-debug": "yarn build && yarn run-server-debug",
-    "run-server-debug": "DEBUG=mcr:server node ./bin/www"
+    "run-server-debug": "DEBUG=mcr:server node ./bin/www",
+    "heroku-postbuild": "cd mcr && yarn && yarn run build"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
