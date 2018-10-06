@@ -1,0 +1,23 @@
+.reactions-wrapper {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+  .reaction-icon {
+    display: inline-block;
+    padding: 0 1rem;
+    text-align: center;
+    .reaction-icon-span {
+      display: block;
+      .reaction-icon-image {
+        display: inline-block;
+        max-width: 2rem;
+        border-radius: 100rem;
+      }
+    }
+    .reaction-count-span {
+      display: block;
+      font-size: 1.5rem;
+    }
+  }
+}

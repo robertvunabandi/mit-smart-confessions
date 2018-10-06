@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,wBAAc;EACZ,UAAU,EAAE,MAAM",
+"sources": ["privacy_page.scss"],
+"names": [],
+"file": "privacy_page.css"
+}

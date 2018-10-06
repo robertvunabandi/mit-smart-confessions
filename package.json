@@ -1,0 +1,44 @@
+{
+  "name": "mcr",
+  "version": "0.0.0",
+  "description": "MIT Confession Rater is an application that uses machine learning to extract or produce interesting data from MIT confessions",
+  "private": true,
+  "author": "Robert M. Vunabandi <rvunabandi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "delete-dist": "rm -rf ./public/dist",
+    "build": "yarn delete-dist && npx webpack",
+    "start": "yarn build && yarn run-server",
+    "run-server": "node ./bin/www",
+    "start-debug": "yarn build && yarn run-server-debug",
+    "run-server-debug": "DEBUG=mcr:server node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "7",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.6.1",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.9.3",
+    "path": "^0.12.7",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}

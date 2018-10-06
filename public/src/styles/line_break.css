@@ -1,0 +1,10 @@
+.line-break {
+  padding: 1.25rem 2rem 0.75rem 2rem;
+  display: block; }
+  .line-break div {
+    display: block;
+    min-height: 0.2rem;
+    border-radius: 100rem;
+    background-color: rgba(0, 0, 0, 0.3); }
+
+/*# sourceMappingURL=line_break.css.map */

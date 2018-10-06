@@ -1,0 +1,26 @@
+// todo - make these divs stand to the top of the wrapper parent
+.horizontal-split-div-parent {
+  margin: 0 auto;
+  .horizontal-split-div {
+    display: inline-block;
+    vertical-align:top;
+  }
+  .horizontal-split-div-1 {
+    width: 100%;
+  }
+  .horizontal-split-div-2 {
+    width: 50%;
+  }
+  .horizontal-split-div-3 {
+    width: 33.3%;
+  }
+  .horizontal-split-div-4 {
+    width: 25%;
+  }
+  .horizontal-split-div-5 {
+    width: 20%;
+  }
+  .horizontal-split-div-6 {
+    width: 16.6%;
+  }
+}

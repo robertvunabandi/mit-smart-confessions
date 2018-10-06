@@ -1,0 +1,91 @@
+/**
+ * all pages will just share the same css. if needed, we can split it up.
+ *
+ * some maps used in comments to keep them short:
+ * - $SO = https://stackoverflow.com
+ * whenever you see these symbols, replace them with the appropriate mapping
+ */
+
+// #B0D1F0 nice color for bkg for predict icons
+
+$footer-height: 3rem;
+
+* {
+  font-family: 'Niramit', sans-serif;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  #root {
+    /*
+     * root-init
+     * the content of the page is rendered here, outside of root-init we have the
+     * navigation bar and the footer.
+     */
+    #root-init {
+      .page-wrapper {
+        padding: 1rem 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+#nav-bar {
+  padding: 1rem;
+  background-color: #333;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    // these are elements of type li
+    .navbar-option {
+      float: left;
+      a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 0 0.5rem;
+        text-decoration: none;
+        border-bottom: 2px solid rgba(0,0,0,0);
+      }
+      a:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+    .navbar-option-active {
+      a {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}
+
+// todo - make footer sticky bottom of the page
+// $SO/questions/18739937/how-to-keep-footer-at-bottom-of-screen
+#footer {
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+  * {
+    color: white;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+extends templates/layout
+
+block script
+    script(src="/dist/error.js")
+    script.
+        const ERROR_MESSAGE="#{error.message}"

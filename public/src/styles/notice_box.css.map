@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,+BAAY;EACV,OAAO,EAAE,MAAM;EACf,KAAK,EAAE,OAAmB;EAC1B,WAAW,EAAE,GAAG;AAElB,2CAAwB;EACtB,gBAAgB,EAAE,sBAAsB;AAE1C,uCAAoB;EAClB,gBAAgB,EAAE,uBAAuB;AAE3C,qCAAkB;EAChB,gBAAgB,EAAE,qBAAqB",
+"sources": ["notice_box.scss"],
+"names": [],
+"file": "notice_box.css"
+}

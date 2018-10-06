@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,yBAAe;EACb,UAAU,EAAE,MAAM",
+"sources": ["generate_page.scss"],
+"names": [],
+"file": "generate_page.css"
+}

@@ -1,0 +1,20 @@
+.reactions-wrapper {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+  margin: 0 auto; }
+  .reactions-wrapper .reaction-icon {
+    display: inline-block;
+    padding: 0 1rem;
+    text-align: center; }
+    .reactions-wrapper .reaction-icon .reaction-icon-span {
+      display: block; }
+      .reactions-wrapper .reaction-icon .reaction-icon-span .reaction-icon-image {
+        display: inline-block;
+        max-width: 2rem;
+        border-radius: 100rem; }
+    .reactions-wrapper .reaction-icon .reaction-count-span {
+      display: block;
+      font-size: 1.5rem; }
+
+/*# sourceMappingURL=predictor_reactions.css.map */
