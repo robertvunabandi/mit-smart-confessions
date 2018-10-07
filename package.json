@@ -1,9 +1,13 @@
 {
   "name": "mcr",
   "version": "0.0.0",
+  "engines": {
+    "node": "10.10.0",
+    "yarn": "1.9.4"
+  },
   "description": "MIT Confession Rater is an application that uses machine learning to extract or produce interesting data from MIT confessions",
   "private": true,
-  "author": "Robert M. Vunabandi <rvunabandi@gmail.com>",
+  "author": "Robert M. Vunabandi <rvunabandi@gmail.com> (https://robertvunabandi.com/)",
   "license": "MIT",
   "scripts": {
     "delete-dist": "rm -rf ./public/dist",
