@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "delete-dist": "rm -rf ./public/dist",
-    "build": "yarn delete-dist && npx webpack",
+    "build": "yarn && yarn install && yarn delete-dist && npx webpack",
     "start": "yarn build && yarn run-server",
     "run-server": "node ./bin/www",
     "start-debug": "yarn build && yarn run-server-debug",
