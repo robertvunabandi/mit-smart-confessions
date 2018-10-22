@@ -4,3 +4,4 @@ yarn-error.log
 .idea
 .DS_Store
 /**/*/.DS_Store
+private.txt
