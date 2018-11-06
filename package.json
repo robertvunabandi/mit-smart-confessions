@@ -12,7 +12,7 @@
   "scripts": {
     "delete-dist": "rm -rf ./public/dist",
     "build": "yarn && yarn install && yarn delete-dist && yarn add webpack-cli --dev && npx webpack",
-    "start": "yarn build && yarn run-server",
+    "start": "yarn install && yarn run-server",
     "run-server": "node ./bin/www",
     "start-debug": "yarn build && yarn run-server-debug",
     "run-server-debug": "DEBUG=mcr:server node ./bin/www"
