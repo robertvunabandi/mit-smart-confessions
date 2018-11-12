@@ -1,4 +1,65 @@
+#root-init #predict-page {
+  text-align: center; }
+
+.predict-intro-text-wrapper {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  font-size: 1.5rem; }
+
+.predict-text-wrapper {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.12rem; }
+
+.text-area-predict-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 1rem; }
+  .text-area-predict-wrapper textarea {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    resize: none;
+    height: 8rem;
+    font-size: 1.25rem; }
+
+.button-predict-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 1rem; }
+  .button-predict-wrapper button {
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    padding: 0.35rem 1rem 0.5rem 1rem;
+    border-radius: 100rem; }
+
 #root-init #generate-page {
   text-align: center; }
+
+.generator-prediction {
+  padding: 1rem 1rem 1.5rem 1rem;
+  margin: 0 auto;
+  width: 60%; }
+  .generator-prediction span {
+    font-weight: 700;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 1rem; }
+
+.generator-length {
+  font-size: 1.5rem; }
+  .generator-length .generator-length-label {
+    display: inline-block;
+    margin-left: 0.5rem; }
+  .generator-length .generator-length-input {
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 3rem; }
 
 /*# sourceMappingURL=generate_page.css.map */

@@ -1,5 +1,33 @@
+@import "predict_page";
+
 #root-init {
   #generate-page {
     text-align: center;
+  }
+}
+
+.generator-prediction {
+  padding: 1rem 1rem 1.5rem 1rem;
+  margin: 0 auto;
+  width: 60%;
+  span {
+    font-weight: 700;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+.generator-length {
+  font-size: 1.5rem;
+  .generator-length-label {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+  .generator-length-input {
+    font-size: 1.5rem;
+    text-align: center;
+    max-width: 3rem;
   }
 }
