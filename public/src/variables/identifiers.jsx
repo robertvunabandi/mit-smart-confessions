@@ -21,13 +21,15 @@ const CLASSES = {
   navbarOption: "navbar-option",
   navbarOptionActive: "navbar-option-active",
   predictIntroTextWrapper: "predict-intro-text-wrapper",
+  predictTextWrapper: "predict-text-wrapper",
   textAreaPredictWrapper: "text-area-predict-wrapper",
   buttonPredictWrapper: "button-predict-wrapper",
   reactionsWrapper: "reactions-wrapper",
   reactionIcon: "reaction-icon",
   reactionIconSpan: "reaction-icon-span",
   reactionIconImage: "reaction-icon-image",
-  reactionCountSpan: "reaction-count-span",
+  reactionResultSpan: "reaction-result-span",
+  reactionResultPrediction: "reaction-result-prediction",
   horizontalSplitDivParent: "horizontal-split-div-parent",
   horizontalSplitDiv: "horizontal-split-div",
   noticeBoxWrapper: "notice-box-wrapper",
@@ -35,6 +37,10 @@ const CLASSES = {
   noticeBoxInformation: "notice-box-information",
   noticeBoxWarning: "notice-box-warning",
   noticeBoxError: "notice-box-error",
+  generatorPrediction: "generator-prediction",
+  generatorLength: "generator-length",
+  generatorLengthLabel: "generator-length-label",
+  generatorLengthInput: "generator-length-input",
 };
 
 // the application name, which may or may not change
