@@ -8,7 +8,6 @@ module.exports = {
     predict: public_src + "predict.jsx",
     generate: public_src + "generate.jsx",
     understand: public_src + "understand.jsx",
-    privacy: public_src + "privacy.jsx",
     about: public_src + "about.jsx",
     "how-it-works": public_src + "how-it-works.jsx",
     error: public_src + "error.jsx",

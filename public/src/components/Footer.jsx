@@ -4,7 +4,6 @@ import {APP_NAME} from "../variables/identifiers.jsx";
 import {uppercaseFirstLettersSimpleString} from "../utilities/utils.jsx";
 
 const FOOTER_OPTIONS = [
-  { name: "privacy", url: "/privacy" },
   { name: "about MIT Smart Confession", url: "/about" },
   { name: "how it works", url: "/how-it-works" },
 ];
