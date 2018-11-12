@@ -20,7 +20,16 @@ API.get = function (endpoint, params, successCallback, failureCallback) {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         if (successCallback) {
-          successCallback(JSON.parse(xhr.responseText));
+          let output;
+          try {
+            // this won't work for responses that are just a sentence,
+            // so we do a try catch around it so that we can have this
+            // problem solved
+            output = JSON.parse(xhr.responseText);
+          } catch (e) {
+            output = xhr.responseText;
+          }
+          successCallback(output);
         }
       } else if (failureCallback) {
         failureCallback({text: xhr.statusText, url: xhr.responseURL});
