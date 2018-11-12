@@ -1,0 +1,12 @@
+/*
+template below
+
+@media (max-width: $screen-xxs) {}
+@media (min-width: $screen-xxs) and (max-width: $screen-xs) {}
+@media (min-width: $screen-xs) and (max-width: $screen-sm) {}
+@media (min-width: $screen-sm) and (max-width: $screen-md) {}
+@media (min-width: $screen-md) and (max-width: $screen-lg) {}
+@media (min-width: $screen-lg) {}
+*/
+
+/*# sourceMappingURL=screen_sizes.css.map */
