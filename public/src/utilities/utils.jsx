@@ -3,7 +3,7 @@
  * least 1
  * @param {String} string
  * @return {Boolean}
- **/
+ * */
 function isStringNonEmpty(string) {
   return !!string && (typeof string === "string") && (string.toString().length > 0);
 }
@@ -13,7 +13,7 @@ function isStringNonEmpty(string) {
  * length 0
  * @param {String} string
  * @return {Boolean}
- **/
+ * */
 function isStringEmpty(string) {
   return !isStringNonEmpty(string);
 }
@@ -71,9 +71,39 @@ function createObjectWithKeysAndValue(array, value) {
   }, {});
 }
 
+/**
+ * rounds the given number to the nearest {digits} digits
+ * @param {Number} number
+ * @param {Number} digits
+ * */
+function roundToNearestDigits(number, digits = null) {
+  if (!digits || digits === 0) {
+    return Math.round(number);
+  }
+  const power_10 = Math.pow(10, digits);
+  return Math.round(number * power_10) / power_10;
+}
+
+
+/**
+ * adds the {addition} in between each element of {array}
+ * @param {Array} array
+ * @param {?} addition
+ * */
+function addInBetweenArrayElements(array, addition) {
+  const output_array = [];
+  array.forEach(element => {
+    output_array.push(element);
+    output_array.push(addition);
+  });
+  return output_array.slice(0, output_array.length - 1);
+}
+
 export {
   isStringEmpty,
   isNull,
   uppercaseFirstLettersSimpleString,
   createObjectWithKeysAndValue,
+  roundToNearestDigits,
+  addInBetweenArrayElements,
 };
