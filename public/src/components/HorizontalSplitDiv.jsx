@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {CLASSES} from "../variables/identifiers.jsx";
 import "../styles/horizontal_split_div.css";
 
@@ -28,3 +29,8 @@ function HorizontalSplitDivView(props) {
     </div>
   );
 }
+
+HorizontalSplitDivView.propTypes = {
+  split_class: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
