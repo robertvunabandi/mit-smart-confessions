@@ -13,8 +13,11 @@
         display: inline-block;
         max-width: 2rem;
         border-radius: 100rem; }
-    .reactions-wrapper .reaction-icon .reaction-count-span {
+    .reactions-wrapper .reaction-icon .reaction-result-span {
       display: block;
-      font-size: 1.5rem; }
+      padding: 0.5rem; }
+      .reactions-wrapper .reaction-icon .reaction-result-span .reaction-result-prediction {
+        display: block;
+        font-weight: 700; }
 
 /*# sourceMappingURL=predictor_reactions.css.map */

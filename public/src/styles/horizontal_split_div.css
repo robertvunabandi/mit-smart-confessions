@@ -1,3 +1,13 @@
+/*
+template below
+
+@media (max-width: $screen-xxs) {}
+@media (min-width: $screen-xxs) and (max-width: $screen-xs) {}
+@media (min-width: $screen-xs) and (max-width: $screen-sm) {}
+@media (min-width: $screen-sm) and (max-width: $screen-md) {}
+@media (min-width: $screen-md) and (max-width: $screen-lg) {}
+@media (min-width: $screen-lg) {}
+*/
 .horizontal-split-div-parent {
   margin: 0 auto; }
   .horizontal-split-div-parent .horizontal-split-div {
@@ -15,5 +25,10 @@
     width: 20%; }
   .horizontal-split-div-parent .horizontal-split-div-6 {
     width: 16.6%; }
+
+@media (max-width: 768px) {
+  .horizontal-split-div-parent .horizontal-split-div {
+    display: block;
+    width: 100%; } }
 
 /*# sourceMappingURL=horizontal_split_div.css.map */

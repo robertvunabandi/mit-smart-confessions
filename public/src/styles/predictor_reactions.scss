@@ -15,9 +15,13 @@
         border-radius: 100rem;
       }
     }
-    .reaction-count-span {
+    .reaction-result-span {
       display: block;
-      font-size: 1.5rem;
+      padding: 0.5rem;
+      .reaction-result-prediction {
+        display: block;
+        font-weight: 700;
+      }
     }
   }
 }

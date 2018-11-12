@@ -8,6 +8,12 @@
   padding-bottom: 1rem;
   font-size: 1.5rem; }
 
+.predict-text-wrapper {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.12rem; }
+
 .text-area-predict-wrapper {
   margin: 0 auto;
   text-align: center;
@@ -32,4 +38,4 @@
     padding: 0.35rem 1rem 0.5rem 1rem;
     border-radius: 100rem; }
 
-/*# sourceMappingURL=predict_page.css.maps.map */
+/*# sourceMappingURL=predict_page.css.map */
