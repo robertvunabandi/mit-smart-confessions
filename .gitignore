@@ -1,5 +1,6 @@
 node_modules
 yarn-error.log
+scratch.js
 .idea
 .DS_Store
 /**/*/.DS_Store
