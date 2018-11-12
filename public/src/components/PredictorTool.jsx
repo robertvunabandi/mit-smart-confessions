@@ -6,11 +6,11 @@ import PredictorReactionsContainer from "./PredictorReactions.jsx";
 
 export default class PredictorToolContainer extends React.Component {
   static get defaultState() {
-    const results = PredictorReactionsContainer.defaultProps.results;
     return {
       text: null,
       last_text: null,
-      results,
+      cache: {},
+      results: PredictorReactionsContainer.defaultProps.results,
     };
   }
 
@@ -25,13 +25,17 @@ export default class PredictorToolContainer extends React.Component {
       console.warn("no text given");
       return;
     }
-    // don't predict twice if we have already made this prediction
-    // last_text update every time we call this function with a
-    // different text on this.state.text
-    if (this.state.text === this.state.last_text) {
-      console.warn("already made prediction");
+
+    // if the result is in the cache, just set that as the prediction
+    if (this.state.text in this.state.cache) {
+      const results = this.state.cache[this.state.text];
+      this.setState(_ => {
+        return {results};
+      });
       return;
     }
+
+    // make the API call
     API.get(
       "/api/predict",
       {text: this.state.text},
@@ -41,7 +45,7 @@ export default class PredictorToolContainer extends React.Component {
   }
 
   predictionSuccessCallback(data) {
-    this.updateLastText();
+    this.updateCache(data);
     this.setState(_ => {
       return {results: data};
     });
@@ -52,15 +56,19 @@ export default class PredictorToolContainer extends React.Component {
     console.error(error);
   }
 
-  updateLastText() {
+  updateCache(data) {
     this.setState((prevState, _) => {
-      return {last_text: prevState.text};
+      const new_cache = Object.keys(prevState.cache).reduce((new_cache_, key) => {
+        new_cache_[key] = prevState.cache[key];
+        return new_cache_;
+      }, {});
+      new_cache[prevState.text] = data;
+      return {cache: new_cache};
     });
   }
 
   updateText(event) {
   this.setState({text: event.target.value});
-
   }
 
   render() {
@@ -75,18 +83,15 @@ export default class PredictorToolContainer extends React.Component {
   }
 }
 
+/*
+todo - check out https://github.com/buildo/react-autosize-textarea/tree/master/src
+yarn add react-autosize-textarea
+TextareaAutosize
+*/
 function PredictorToolView(props) {
   return (
     <div>
-      <div className={CLASSES.predictIntroTextWrapper}>
-        Find out how popular your confession will be
-      </div>
       <div className={CLASSES.textAreaPredictWrapper}>
-        {/*
-        todo - check out https://github.com/buildo/react-autosize-textarea/tree/master/src
-        yarn add react-autosize-textarea
-        TextareaAutosize
-        */}
         <textarea
           value={props.text || ""}
           onChange={props.updateText}
