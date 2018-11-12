@@ -11,7 +11,8 @@ export default class UnderstandPageContainer extends React.Component {
 function UnderstandPageView() {
   return (
     <div id={IDS.understandPage} className={CLASSES.pageWrapper}>
-      This is upcoming.
+      <h1>MSC Understanding Confessions</h1>
+      <span>Upcoming...</span>
     </div>
   );
 }
