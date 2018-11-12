@@ -20,21 +20,24 @@ function HomePageView() {
       <HorizontalSplitDivContainer>
         <div>
           <h3>Confession Rater</h3>
-          Predict how popular your confession will be. <br />
+          Predict how popular your confession will be.
+          <br />
           <a href={"/predict"}>
             Try it
           </a>
         </div>
         <div>
           <h3>Smart Confession Completion</h3>
-          Start writing, let our tool complete the confession to maximize popularity. <br />
+          Start writing, let our tool complete the confession to maximize popularity.
+          <br />
           <a href={"/generate"}>
             Try it
           </a>
         </div>
         <div>
           <h3>Understanding Confessions</h3>
-          Understand what makes some confessions more popular than others. <br />
+          Understand what makes some confessions more popular than others.
+          <br />
           <a href={"/understand"}>
             View Explanations
           </a>
