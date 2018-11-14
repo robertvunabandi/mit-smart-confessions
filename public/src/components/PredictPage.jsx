@@ -20,7 +20,7 @@ function PredictPageView() {
       </div>
       <PredictorToolContainer />
       <div className={CLASSES.predictTextWrapper}>
-        The predictions made are of the form "min-max: probability".
+        The predictions made are of the form "min-max: probability"
       </div>
       <br/>
       <div className={CLASSES.predictTextWrapper}>
