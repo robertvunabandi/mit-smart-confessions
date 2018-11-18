@@ -7,7 +7,7 @@
 }
 
 .generator-prediction {
-  padding: 1rem 1rem 1.5rem 1rem;
+  padding: 1rem;
   margin: 0 auto;
   width: 60%;
   span {
@@ -21,13 +21,20 @@
 
 .generator-length {
   font-size: 1.5rem;
+  display: inline-block;
   .generator-length-label {
     display: inline-block;
-    margin-left: 0.5rem;
   }
   .generator-length-input {
     font-size: 1.5rem;
-    text-align: center;
-    max-width: 3rem;
+    text-align: center !important;
+    max-width: 5rem;
+    border: 2px solid $c-1-0700;
+    border-radius: 5px;
+    padding: 0.15rem 0 0.15rem 0.76rem;
+  }
+
+  .generator-length-input:focus, .generator-length-input:hover {
+    background-color: $c-BK-0050;
   }
 }
