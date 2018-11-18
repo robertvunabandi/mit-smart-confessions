@@ -29,7 +29,7 @@ function NavBarView(props) {
         {NAVBAR_OPTIONS.map((navbar_option_obj, index) => {
           const { name, url } = navbar_option_obj;
           const active_status_class = props.active_page === name
-            ? " " + CLASSES.navbarOptionActive
+            ? " " + CLASSES.navbarOptionActiveTab
             : "";
           // todo - should display icon in case of home page
           return <li className={"navbar-option" + active_status_class} key={index}>
