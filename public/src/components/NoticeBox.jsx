@@ -1,18 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {CLASSES} from "../variables/identifiers.jsx";
-import "../styles/notice_box.css";
-
-const NOTICE_TYPES = {
-  WARNING: "warning",
-  ERROR: "error",
-  INFORMATION: "information",
-};
+import "../styles/notice_box.scss";
+import {NOTICE_TYPES} from "./NoticeSection.jsx";
 
 const propTypes = {
+  text: PropTypes.string.isRequired,
   // must be one of NOTICE_TYPES
-  type:  PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  close: PropTypes.func.isRequired,
 };
 
 export default class NoticeBoxContainer extends React.Component {
@@ -31,19 +27,21 @@ export default class NoticeBoxContainer extends React.Component {
   }
 
   render() {
-    return (
-      <NoticeBoxView
-        {...this.props}
-        notice_type={NoticeBoxContainer.getNoticeClass(this.props.type)} />
-    );
+    return <NoticeBoxView {...this.props}/>;
   }
 }
 
 NoticeBoxContainer.propTypes = propTypes;
-NoticeBoxContainer.NOTICE_TYPES = NOTICE_TYPES;
 
 function NoticeBoxView(props) {
-  return <div className={CLASSES.noticeBoxWrapper}>
-    <div className={`${CLASSES.noticeBox} ${props.notice_type}`}>{props.message}</div>
-  </div>
+  return (
+    <div className={CLASSES.noticeBoxWrapper}>
+      <div className={`${CLASSES.noticeBoxClose}`}>
+        <input type={"button"} value={"close"} onClick={props.close}/>
+      </div>
+      <div className={`${CLASSES.noticeBox} ${NoticeBoxContainer.getNoticeClass(props.type)}`}>
+        {props.text}
+      </div>
+    </div>
+  );
 }
