@@ -1,6 +1,6 @@
 import React from "react";
 import {IDS, CLASSES} from "../variables/identifiers.jsx";
-import "../styles/about_page.css";
+import "../styles/about_page.scss";
 
 export default class AboutPageContainer extends React.Component {
   render() {

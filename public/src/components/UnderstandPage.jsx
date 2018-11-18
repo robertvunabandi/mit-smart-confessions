@@ -1,6 +1,6 @@
 import React from "react";
 import {IDS, CLASSES} from "../variables/identifiers.jsx";
-import "../styles/understand_page.css";
+import "../styles/understand_page.scss";
 
 export default class UnderstandPageContainer extends React.Component {
   render() {

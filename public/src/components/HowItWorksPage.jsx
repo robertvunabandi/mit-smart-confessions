@@ -1,6 +1,6 @@
 import React from "react";
 import {IDS, CLASSES} from "../variables/identifiers.jsx";
-import "../styles/how_it_works_page.css";
+import "../styles/how_it_works_page.scss";
 
 export default class HowItWorksPageContainer extends React.Component {
   render() {

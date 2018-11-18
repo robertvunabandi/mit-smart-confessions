@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {CLASSES} from "../variables/identifiers.jsx";
-import "../styles/horizontal_split_div.css";
+import "../styles/horizontal_split_div.scss";
 
 export default class HorizontalSplitDivContainer extends React.Component {
   render() {

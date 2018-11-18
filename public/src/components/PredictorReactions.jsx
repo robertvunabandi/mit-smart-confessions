@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { createObjectWithKeysAndValue } from "../utilities/utils.jsx";
 import { CLASSES } from "../variables/identifiers.jsx";
 import IconResultStatusContainer from "./IconResultStatus.jsx";
-import "../styles/predictor_reactions.css";
+import "../styles/predictor_reactions.scss";
 
 const {FB_REACTIONS, FB_REACTIONS_ORDER} = require("../../../lib/constants.js");
 const defaultProps = {

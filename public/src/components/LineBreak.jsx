@@ -1,6 +1,6 @@
 import React from "react";
 import {CLASSES} from "../variables/identifiers.jsx";
-import "../styles/line_break.css";
+import "../styles/line_break.scss";
 
 export default class LineBreakContainer extends React.Component {
   render() {

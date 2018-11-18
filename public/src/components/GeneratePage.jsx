@@ -1,6 +1,6 @@
 import React from "react";
 import {IDS, CLASSES} from "../variables/identifiers.jsx";
-import "../styles/generate_page.css";
+import "../styles/generate_page.scss";
 import GeneratorToolContainer from "./GeneratorTool.jsx";
 
 export default class GeneratePageContainer extends React.Component {

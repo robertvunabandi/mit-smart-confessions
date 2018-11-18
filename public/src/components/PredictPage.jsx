@@ -1,8 +1,7 @@
 import React from "react";
 import PredictorToolContainer from "./PredictorTool.jsx";
-import NoticeBoxContainer from "./NoticeBox.jsx";
 import {IDS, CLASSES} from "../variables/identifiers.jsx";
-import "../styles/predict_page.css";
+import "../styles/predict_page.scss";
 
 export default class PredictPageContainer extends React.Component {
   render() {
