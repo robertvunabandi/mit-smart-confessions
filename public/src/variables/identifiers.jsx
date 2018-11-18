@@ -12,14 +12,34 @@ const IDS = {
   aboutPage: "about-page",
   privacyPage: "privacy-page",
   howItWorksPage: "how-it-works-page",
+  // notice section on all pages
+  noticeSection: "notice-section",
+  noticeSectionClose: "notice-section-close",
 };
 
 // HTML classes
 const CLASSES = {
   lineBreak: "line-break",
   pageWrapper: "page-wrapper",
+  // home page
+  homePageBlock: "home-page-block",
+  // navbar
   navbarOption: "navbar-option",
-  navbarOptionActive: "navbar-option-active",
+  navbarOptionActiveTab: "navbar-option-active-tab",
+  // h-split
+  horizontalSplitDivParent: "horizontal-split-div-parent",
+  horizontalSplitDiv: "horizontal-split-div",
+  // starting notice section
+  noticeSectionRevealed: "notice-section-revealed",
+  noticeSectionHidden: "notice-section-hidden",
+  noticeSectionText: "notice-section-text",
+  noticeBoxWrapper: "notice-box-wrapper",
+  noticeBox: "notice-box",
+  noticeBoxClose: "notice-box-close",
+  noticeBoxInformation: "notice-box-information",
+  noticeBoxWarning: "notice-box-warning",
+  noticeBoxError: "notice-box-error",
+  // predict
   predictIntroTextWrapper: "predict-intro-text-wrapper",
   predictTextWrapper: "predict-text-wrapper",
   textAreaPredictWrapper: "text-area-predict-wrapper",
@@ -30,17 +50,16 @@ const CLASSES = {
   reactionIconImage: "reaction-icon-image",
   reactionResultSpan: "reaction-result-span",
   reactionResultPrediction: "reaction-result-prediction",
-  horizontalSplitDivParent: "horizontal-split-div-parent",
-  horizontalSplitDiv: "horizontal-split-div",
-  noticeBoxWrapper: "notice-box-wrapper",
-  noticeBox: "notice-box",
-  noticeBoxInformation: "notice-box-information",
-  noticeBoxWarning: "notice-box-warning",
-  noticeBoxError: "notice-box-error",
+  // generator
   generatorPrediction: "generator-prediction",
   generatorLength: "generator-length",
   generatorLengthLabel: "generator-length-label",
   generatorLengthInput: "generator-length-input",
+};
+
+// events from event listeners
+const EVENTS = {
+  notice: "ev-notice",
 };
 
 // the application name, which may or may not change
@@ -51,4 +70,5 @@ export {
   IDS,
   CLASSES,
   APP_NAME,
+  EVENTS,
 };
