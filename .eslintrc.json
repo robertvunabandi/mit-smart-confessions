@@ -43,7 +43,7 @@
     // enforce a maximum of 50 lines per functions
     "max-lines-per-function": [1, 50],
     // enforce a max length of 100 for code and 70 for commments
-    "max-len": [1, {"code": 100, "comments": 70, "ignoreUrls": true }],
+    "max-len": [1, {"code": 100, "comments": 80, "ignoreUrls": true }],
     // limit the max nested callbacks to 2
     "max-nested-callbacks": [1, 2],
     // require using let or const
