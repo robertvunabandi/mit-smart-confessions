@@ -2,8 +2,8 @@
   "name": "mit-smart-confessions-website",
   "version": "0.0.0",
   "engines": {
-    "node": "10.10.0",
-    "yarn": "1.9.4"
+    "node": "11.2.0",
+    "yarn": "1.12.3"
   },
   "description": "MIT Confession Rater is an application that uses machine learning to extract or produce interesting data from MIT confessions",
   "private": true,
@@ -12,7 +12,7 @@
   "scripts": {
     "delete-dist": "rm -rf ./public/dist",
     "build": "yarn install && yarn build-app",
-    "build-app": "yarn delete-dist && yarn add webpack-cli --dev && npx webpack",
+    "build-app": "yarn delete-dist && npx webpack",
     "start": "yarn install && yarn run-server",
     "build-run": "yarn build-app && yarn run-server",
     "run-server": "node ./bin/www",
