@@ -1,1 +1,8 @@
-Add gulp so that we can watch changes and restart the server if changes happen
+- add build + watch then run build on the background
+- break footer and header apart
+- create an event listener for when a prediction is made to reajust the navbar
+- write the content for remaining pages:
+  - About
+  - Understand
+  - How it works
+- Remove all .css and .css.map and just load the scss.
