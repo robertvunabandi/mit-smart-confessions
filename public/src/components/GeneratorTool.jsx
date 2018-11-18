@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import {isStringEmpty} from "../utilities/utils.jsx";
 import API from "../utilities/api.jsx";
 import {CLASSES} from "../variables/identifiers.jsx";
-
+import PredictorToolContainer from "./PredictorTool.jsx";
+import NoticeSectionContainer, { NOTICE_TYPES } from "./NoticeSection.jsx";
+import LineBreakContainer from "./LineBreak";
 
 const DEFAULT_LENGTH = 20;
 
@@ -25,7 +27,10 @@ export default class GeneratorToolContainer extends React.Component {
   predict() {
     // don't do anything if no string has been given
     if (isStringEmpty(this.state.seed_text)) {
-      console.warn("no text given");
+      NoticeSectionContainer.dispatchNotice(
+        "Please provide a text seed.",
+        NOTICE_TYPES.WARNING)
+      ;
       return;
     }
 
@@ -43,7 +48,8 @@ export default class GeneratorToolContainer extends React.Component {
       "/api/generate",
       {seed_text: this.state.seed_text, length: (this.state.length || DEFAULT_LENGTH) + ""},
       this.predictionSuccessCallback.bind(this),
-      this.predictionFailureCallback.bind(this)
+      // both generator and predictor work the same here
+      PredictorToolContainer.predictionFailureCallback.bind(this)
     );
   }
 
@@ -52,11 +58,6 @@ export default class GeneratorToolContainer extends React.Component {
     this.setState(_ => {
       return {text_prediction: data};
     });
-  }
-
-  predictionFailureCallback(error) {
-    // todo - implement this method
-    console.error(error);
   }
 
   updateCache(data) {
@@ -101,25 +102,29 @@ function GeneratorToolView(props) {
           onChange={props.updateSeedText}
           onBlur={props.updateSeedText}/>
         <br/>
+        <br/>
         <span className={CLASSES.generatorLength}>
-        <span>
-          <span className={CLASSES.generatorLengthLabel}>Length</span>
-          <input
-            className={CLASSES.generatorLengthInput}
-            type={"number"}
-            value={props.length || DEFAULT_LENGTH}
-            maxLength={200}
-            onChange={props.updateLength}
-            onBlur={props.updateLength}/>
-        </span>
+          <span>
+            <span className={CLASSES.generatorLengthLabel}>Desired Text Length</span>
+            {"  "}
+            <input
+              className={CLASSES.generatorLengthInput}
+              type={"number"}
+              value={props.length || DEFAULT_LENGTH}
+              maxLength={200}
+              onChange={props.updateLength}
+              onBlur={props.updateLength}/>
+          </span>
         </span>
       </div>
       <div className={CLASSES.buttonPredictWrapper}>
         <button onClick={props.predict}>Predict</button>
       </div>
+      <LineBreakContainer />
       <div className={CLASSES.generatorPrediction}>
         <span>{props.text_prediction}</span>
       </div>
+      <LineBreakContainer />
     </div>
   );
 }
