@@ -3,6 +3,10 @@ import {isStringEmpty} from "../utilities/utils.jsx";
 import API from "../utilities/api.jsx";
 import {CLASSES} from "../variables/identifiers.jsx";
 import PredictorReactionsContainer from "./PredictorReactions.jsx";
+import NoticeSectionContainer from "./NoticeSection.jsx";
+import {NOTICE_TYPES} from "./NoticeSection.jsx";
+import HorizontalSplitDivContainer from "./HorizontalSplitDiv";
+import LineBreakContainer from "./LineBreak";
 
 export default class PredictorToolContainer extends React.Component {
   static get defaultState() {
@@ -22,7 +26,10 @@ export default class PredictorToolContainer extends React.Component {
   predict() {
     // don't do anything if no string has been given
     if (isStringEmpty(this.state.text)) {
-      console.warn("no text given");
+      NoticeSectionContainer.dispatchNotice(
+        "Please provide a text to predict.",
+        NOTICE_TYPES.WARNING)
+      ;
       return;
     }
 
@@ -40,7 +47,7 @@ export default class PredictorToolContainer extends React.Component {
       "/api/predict",
       {text: this.state.text},
       this.predictionSuccessCallback.bind(this),
-      this.predictionFailureCallback.bind(this)
+      PredictorToolContainer.predictionFailureCallback.bind(this)
     );
   }
 
@@ -51,9 +58,11 @@ export default class PredictorToolContainer extends React.Component {
     });
   }
 
-  predictionFailureCallback(error) {
-    // todo - implement this method
-    console.error(error);
+  static predictionFailureCallback(error) {
+    NoticeSectionContainer.dispatchNotice(
+      `An error occurred when making the prediction: ${error.text}.`,
+      NOTICE_TYPES.ERROR)
+    ;
   }
 
   updateCache(data) {
@@ -100,7 +109,9 @@ function PredictorToolView(props) {
       <div className={CLASSES.buttonPredictWrapper}>
         <button onClick={props.predict}>Predict</button>
       </div>
+      <LineBreakContainer />
       <PredictorReactionsContainer results={props.results}/>
+      <LineBreakContainer />
     </div>
   );
 }
