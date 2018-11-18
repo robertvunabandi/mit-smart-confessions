@@ -1,3 +1,6 @@
+@import "substyles/screen_sizes";
+@import "substyles/colors";
+
 #root-init {
   #predict-page {
     text-align: center;
@@ -25,24 +28,59 @@
   textarea {
     text-align: center;
     margin: 0 auto;
-    width: 60%;
     resize: none;
     height: 8rem;
     font-size: 1.25rem;
+    border: 2px solid $c-1-0700;
+    border-radius: 5px;
+    padding: 0.35rem;
+  }
+  textarea:focus, textarea:hover {
+    background-color: $c-BK-0050;
   }
   padding-bottom: 1rem;
+}
+
+/* medias to adjust the screen size for the textarea */
+@media (max-width: $screen-xs) {
+  .text-area-predict-wrapper {
+    textarea {
+      width: 92%;
+    }
+  }
+}
+@media (min-width: $screen-xs) and (max-width: $screen-md) {
+  .text-area-predict-wrapper {
+    textarea {
+      width: 80%;
+    }
+  }
+}
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
+  .text-area-predict-wrapper {
+    textarea {
+      width: 64%;
+    }
+  }
+}
+@media (min-width: $screen-lg) {
+  .text-area-predict-wrapper {
+    textarea {
+      width: 54%;
+    }
+  }
 }
 
 .button-predict-wrapper {
   margin: 0 auto;
   text-align: center;
   button {
-    background-color: black;
+    background-color: $c-1-1000;
     color: white;
     border: none;
     font-size: 1.25rem;
     padding: 0.35rem 1rem 0.5rem 1rem;
-    border-radius: 100rem;
+    border-radius: 4px;
   }
   padding-bottom: 1rem;
 }

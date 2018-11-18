@@ -1,0 +1,76 @@
+@import "substyles/screen_sizes";
+@import "substyles/colors";
+
+#notice-section {
+  #notice-section-close {
+    div {
+      font-size: 2rem;
+      color: white;
+      line-height: 1;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid white;
+    }
+    width: 60%;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+
+  }
+  padding: 5rem 0.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  min-height: 100%;
+  background-color: $c-BK-0800;
+  border-left: 2px solid$c-BK-0400;
+  box-shadow: -0.2rem 0 0.25rem $c-BK-0200;
+  // todo - this overflow scroll is not working as expected
+  overflow: scroll;
+
+  .notice-section-text {
+    padding: 1rem 0;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.notice-section-revealed {
+  display: block !important;
+}
+.notice-section-hidden {
+  display: none !important;
+}
+
+
+@media (max-width: $screen-xxs) {
+  #notice-section {
+    width: 50%;
+  }
+}
+@media (min-width: $screen-xxs) and (max-width: $screen-xs) {
+  #notice-section {
+    width: 45%;
+  }
+}
+@media (min-width: $screen-xs) and (max-width: $screen-sm) {
+  #notice-section {
+    width: 40%;
+  }
+}
+@media (min-width: $screen-sm) and (max-width: $screen-md) {
+  #notice-section {
+    width: 35%;
+  }
+}
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
+  #notice-section {
+    width: 30%;
+  }
+}
+@media (min-width: $screen-lg) {
+  #notice-section {
+    width: 25%;
+  }
+}

@@ -1,10 +1,12 @@
+@import "substyles/colors";
+
 .line-break {
-  padding: 1.25rem 2rem 0.75rem 2rem;
+  padding: 1.25rem 1rem 0.75rem 1rem;
   display: block;
   div {
     display: block;
-    min-height: 0.2rem;
+    min-height: 3px;
     border-radius: 100rem;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: $c-BK-0100;
   }
 }

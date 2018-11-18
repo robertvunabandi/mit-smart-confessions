@@ -7,11 +7,11 @@
  */
 
 // #B0D1F0 nice color for bkg for predict icons
-
-$footer-height: 3rem;
+@import "substyles/colors";
 
 * {
   font-family: 'Niramit', sans-serif;
+  transition: all 100ms;
 }
 
 html {
@@ -38,31 +38,35 @@ body {
 
 #nav-bar {
   padding: 1rem;
-  background-color: #333;
+  background-color: $c-1-1000;
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0.25rem 0;
     overflow: hidden;
     // these are elements of type li
     .navbar-option {
+      padding: 0.25rem 0 0.32rem 0;
       float: left;
+      border-radius: 3px;
+      margin: 0 0.1rem;
+      border-bottom: 2px solid rgba(0,0,0,0);
       a {
         display: block;
         color: white;
         text-align: center;
         padding: 0 0.5rem;
         text-decoration: none;
-        border-bottom: 2px solid rgba(0,0,0,0);
-      }
-      a:hover {
-        border-bottom: 2px solid white;
       }
     }
-    .navbar-option-active {
-      a {
-        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-      }
+    .navbar-option:hover {
+      background-color: $c-2-0800;
+    }
+
+    .navbar-option-active-tab {
+      background-color: $c-2-0600;
+      border: 1px solid $c-WE-0150;
+      box-shadow: inset 0 0 0.25rem $c-WE-0300;
     }
   }
 }
@@ -70,7 +74,7 @@ body {
 // todo - make footer sticky bottom of the page
 // $SO/questions/18739937/how-to-keep-footer-at-bottom-of-screen
 #footer {
-  background-color: #333;
+  background-color: $c-1-1000;
   position: relative;
   padding: 1.5rem;
   color: white;
@@ -90,6 +94,9 @@ body {
         display: inline-block;
         color: white;
         text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
       }
     }
   }
