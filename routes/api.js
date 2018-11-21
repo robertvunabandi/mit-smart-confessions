@@ -142,4 +142,8 @@ function extractFbReactionsFromObj(json) {
   }, {});
 }
 
+// logging url for debugging
+console.log(process.env.API_URL);
+console.log(API_URL);
+
 module.exports = router;
