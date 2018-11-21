@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router({});
 const { HTTP_CODES, FB_REACTIONS, DEFAULT_GENERATE_LENGTH } = require("../lib/constants.js");
 const { randInt } = require("../lib/utils.js");
-const API_URL = process.env.API_URL || "http://localhost:5000";
+const API_URL = process.env.API_URL || "https://mit-smart-confessions-api.herokuapp.com";
 const http = require("http");
 
 /**
