@@ -1,8 +1,20 @@
+FOR PRES:
+- don't assume most people don't know mit confessions
+- show parallel examples from both the page and the app
+- say that we're predicting "likes" and "loves" and all other reactions
+
+TO DO:
+- push the server for predicting onto heroku or somewhere it can run
+- when making a prediction, add an event listener to adjust the footer
+- improve on the mobile XP. looks kinda bad rn.
 - add build + watch then run build on the background
+- remove the default highlighting of the home page when the current-page is not found in the navbar
 - break footer and header apart
 - create an event listener for when a prediction is made to reajust the navbar
 - write the content for remaining pages:
   - About
   - Understand
   - How it works
+
+DONE:
 - Remove all .css and .css.map and just load the scss.
