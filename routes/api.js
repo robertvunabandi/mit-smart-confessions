@@ -3,7 +3,8 @@ const router = express.Router({});
 const { HTTP_CODES, FB_REACTIONS, DEFAULT_GENERATE_LENGTH } = require("../lib/constants.js");
 const { randInt } = require("../lib/utils.js");
 const API_URL = process.env.API_URL || "https://mit-smart-confessions-api.herokuapp.com";
-const http = require("http");
+const http = require("http"); // use http when working locally
+const https = require("https");
 
 /**
  * The Router Calls
@@ -82,7 +83,7 @@ router.get("/generate", function (req, res) {
 
 function makeHttpRequest(options) {
   return new Promise((resolve, reject) => {
-    http.get(options, responseHandler).on("error", errorHandler);
+    https.get(options, responseHandler).on("error", errorHandler);
 
     function responseHandler(response) {
       let data_stream = "";
@@ -109,24 +110,6 @@ function makeHttpRequest(options) {
       });
     }
   });
-}
-
-function getReactionCount() {
-  let last_min = -1;
-  const bucket_count = randInt(3, 16);
-  const buckets = [];
-  let addition = 0, value = 0, total = 0;
-  for (let i = 0; i < bucket_count; i += 1) {
-    addition = randInt(3, 8);
-    value = randInt(0, 100);
-    buckets.push([last_min, last_min + addition, value]);
-    last_min = last_min + addition;
-    total += value;
-  }
-  for (let i = 0; i < bucket_count; i += 1) {
-    buckets[i][2] = buckets[i][2] / total;
-  }
-  return buckets;
 }
 
 function isSuccessStatus(status) {
