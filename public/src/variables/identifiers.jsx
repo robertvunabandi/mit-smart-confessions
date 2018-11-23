@@ -3,9 +3,11 @@ const IDS = {
   root: "root",
   rootInit: "root-init",
   navBar: "nav-bar",
+  navBarLogo: "nav-bar-logo",
   footer: "footer",
   // specific pages
   homePage: "home-page",
+  homePageLogo: "home-page-logo",
   predictPage: "predict-page",
   generatePage: "generate-page",
   understandPage: "understand-page",
