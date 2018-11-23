@@ -76,7 +76,6 @@ export default class NoticeSectionContainer extends React.Component {
           notices.push(notice);
         }
       });
-      console.log(notices);
       return { notices, is_revealed: notices.length > 0 };
     });
   }
