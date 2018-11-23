@@ -11,7 +11,7 @@ export default class HowItWorksPageContainer extends React.Component {
 function HowItWorksPageView() {
   return (
     <div id={IDS.howItWorksPage} className={CLASSES.pageWrapper}>
-      This is upcoming.
+      <h1>Work in Progress...</h1>
     </div>
   );
 }
