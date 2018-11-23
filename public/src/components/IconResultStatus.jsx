@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import LikeIcon from "../assets/like.jpg";
 import LoveIcon from "../assets/love.jpg";
 import HahaIcon from "../assets/haha.jpg";
@@ -8,8 +7,10 @@ import WowIcon from "../assets/wow.jpg";
 import SadIcon from "../assets/sad.jpg";
 import AngryIcon from "../assets/angry.jpg";
 import {CLASSES} from "../variables/identifiers.jsx";
+import { roundToNearestDigits } from "../utilities/utils.jsx";
+
+
 const {FB_REACTIONS} = require("../../../lib/constants.js");
-import { roundToNearestDigits, addInBetweenArrayElements } from "../utilities/utils.jsx";
 
 
 const propTypes = {
@@ -20,7 +21,6 @@ const propTypes = {
 export default class IconResultStatusContainer extends React.Component {
   constructor(props) {
     super(props);
-    // todo - do some cool animation where the count increases live
   }
 
   static getIcon(icon_name) {
