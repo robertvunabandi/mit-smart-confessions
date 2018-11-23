@@ -1,6 +1,7 @@
 import React from "react";
 import {IDS, CLASSES} from "../variables/identifiers.jsx";
 import {uppercaseFirstLettersSimpleString} from "../utilities/utils.jsx";
+import LOGO_SRC from "../assets/msc-logo-large.png";
 
 const NAVBAR_NAMES = {
   HOME: "home",
@@ -26,6 +27,7 @@ function NavBarView(props) {
   return (
     <nav id={IDS.navBar}>
       <ul>
+
         {NAVBAR_OPTIONS.map((navbar_option_obj, index) => {
           const { name, url } = navbar_option_obj;
           const active_status_class = props.active_page === name
@@ -36,6 +38,9 @@ function NavBarView(props) {
             <a href={url}>{uppercaseFirstLettersSimpleString(name)}</a>
           </li>;
         })}
+        <li id={IDS.navBarLogo}>
+          <img src={LOGO_SRC}/>
+        </li>
       </ul>
     </nav>
   );
