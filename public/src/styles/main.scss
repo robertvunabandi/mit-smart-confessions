@@ -44,6 +44,12 @@ body {
     margin: 0;
     padding: 0.25rem 0;
     overflow: hidden;
+    #nav-bar-logo {
+      float: right;
+      img {
+        max-height: 2.0rem;
+      }
+    }
     // these are elements of type li
     .navbar-option {
       padding: 0.25rem 0 0.32rem 0;
