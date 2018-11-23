@@ -2,6 +2,7 @@ import React from "react";
 import LineBreakContainer from "./LineBreak.jsx";
 import "../styles/home_page.scss";
 import {IDS, CLASSES} from "../variables/identifiers.jsx";
+import LOGO_SRC from "../assets/msc-logo-large.png";
 import HorizontalSplitDivContainer from "./HorizontalSplitDiv.jsx";
 
 export default class HomePageContainer extends React.Component {
@@ -14,9 +15,7 @@ function HomePageView() {
   return (
     <div id={IDS.homePage} className={CLASSES.pageWrapper} >
       <h1>Welcome to MIT Smart Confession</h1>
-      <br/>
-      We use machine learning to take confessions to the next level. Take a look
-      at the tools that we offer.
+      We use machine learning to take confessions to the next level.
       <br/>
       <br/>
       <LineBreakContainer />
@@ -51,8 +50,10 @@ function HomePageView() {
       </HorizontalSplitDivContainer>
       <LineBreakContainer />
       <br />
-      If interested, we can tell you about <a href={"/how-it-works"}>how this works</a> behind
+      If interested, you can find out <a href={"/how-it-works"}>how this works</a> behind
       the scene.
+      <br />
+      <div id={IDS.homePageLogo}><img src={LOGO_SRC}/></div>
     </div>
   );
 }
