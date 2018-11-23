@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router({});
 const { HTTP_CODES, FB_REACTIONS, DEFAULT_GENERATE_LENGTH } = require("../lib/constants.js");
-const { randInt } = require("../lib/utils.js");
 const API_URL = process.env.API_URL || "https://mit-smart-confessions-api.herokuapp.com";
 const http = require("http"); // use http when working locally
 const https = require("https");
@@ -124,9 +123,5 @@ function extractFbReactionsFromObj(json) {
     return obj;
   }, {});
 }
-
-// logging url for debugging
-console.log(process.env.API_URL);
-console.log(API_URL);
 
 module.exports = router;
