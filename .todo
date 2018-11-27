@@ -8,14 +8,17 @@ TO DO:
 - ** improve on the mobile XP. looks bad rn. Need to check multiple pages in small screen
 - ** when making a prediction, add an event listener to adjust the footer
 - ** write the content for remaining pages:
+- * update README
   - About
   - Understand
   - How it works
-- ** remove the default highlighting of the home page when the current-page is not found in the navbar
 - ** create an event listener for when a prediction is made to reajust the navbar
+- Update readme on github
 - break footer and header apart
 - add build + watch then run build on the background
 
 DONE:
+- ** remove the default highlighting of the home page when the current-page is not found in the navbar
+- ** add a link to the github repo on the navbar
 - push the server for predicting onto heroku or somewhere it can run
 - Remove all .css and .css.map and just load the scss.
