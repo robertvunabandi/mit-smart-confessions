@@ -38,8 +38,11 @@ function NavBarView(props) {
             <a href={url}>{uppercaseFirstLettersSimpleString(name)}</a>
           </li>;
         })}
-        <li id={IDS.navBarLogo}>
+        <li id={IDS.navBarLogo} key={990}>
           <img src={LOGO_SRC}/>
+        </li>
+        <li className={"navbar-option"} key={991}>
+          <a href={"https://github.com/robertvunabandi/mit-smart-confessions-website"} target={"blank"}>onGithub</a>
         </li>
       </ul>
     </nav>
