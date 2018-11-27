@@ -14,7 +14,7 @@ class AppContainer extends React.Component {
 function AppView(props) {
   return (
     <div>
-      <NavBarContainer active_page={props.active_page || NAVBAR_NAMES.HOME}/>
+      <NavBarContainer active_page={props.active_page}/>
       <div id={IDS.rootInit}>{props.children}</div>
       <FooterContainer />
       <NoticeSectionContainer lifetime={5}/>
