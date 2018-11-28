@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router({});
 const { HTTP_CODES, FB_REACTIONS, DEFAULT_GENERATE_LENGTH } = require("../lib/constants.js");
-const API_URL = process.env.API_URL || "https://mit-smart-confessions-api.herokuapp.com";
+const API_URL = process.env.API_URL || "http://localhost:5000";
 const http = require("http"); // use http when working locally
 const https = require("https");
 
