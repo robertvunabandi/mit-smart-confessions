@@ -1,5 +1,5 @@
 import React from "react";
-import {IDS} from "../variables/identifiers.jsx";
+import {IDS, EVENTS} from "../variables/identifiers.jsx";
 import {APP_NAME} from "../variables/identifiers.jsx";
 import {uppercaseFirstLettersSimpleString, isStringEmpty} from "../utilities/utils.jsx";
 
@@ -10,13 +10,15 @@ const FOOTER_OPTIONS = [
 
 class FooterContainer extends React.Component {
   componentDidMount() {
+    // update the footer height after this comment mounts
     setTimeout(FooterContainer.updateFooterHeight, 0);
     setTimeout(FooterContainer.updateFooterHeight, 50);
+    // update the footer height every time we resize the window
     window.addEventListener("resize", FooterContainer.updateFooterHeight);
-    // todo - add an event handling to update the footer content when a
-    // prediction is made so that the footer updates accordingly, it should
-    // wait a bit before updating
-    // window.addEventListener("prediction-made", FooterContainer.updateFooterHeight);
+    // update the footer every time we make a prediction
+    window.addEventListener(EVENTS.prediction, FooterContainer.updateFooterHeight);
+    // update the footer every 100ms for all unhandled events
+    setInterval(FooterContainer.updateFooterHeight, 100);
   }
 
   static getCssFooterTop() {

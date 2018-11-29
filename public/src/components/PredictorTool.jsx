@@ -1,11 +1,10 @@
 import React from "react";
 import {isStringEmpty} from "../utilities/utils.jsx";
 import API from "../utilities/api.jsx";
-import {CLASSES} from "../variables/identifiers.jsx";
+import {CLASSES, EVENTS} from "../variables/identifiers.jsx";
 import PredictorReactionsContainer from "./PredictorReactions.jsx";
 import NoticeSectionContainer from "./NoticeSection.jsx";
 import {NOTICE_TYPES} from "./NoticeSection.jsx";
-import HorizontalSplitDivContainer from "./HorizontalSplitDiv";
 import LineBreakContainer from "./LineBreak";
 
 export default class PredictorToolContainer extends React.Component {
@@ -23,13 +22,17 @@ export default class PredictorToolContainer extends React.Component {
     this.state = PredictorToolContainer.defaultState;
   }
 
+  static dispatchPredictionEvent() {
+    setTimeout(() => window.dispatchEvent(new CustomEvent(EVENTS.prediction)), 10);
+  }
+
   predict() {
     // don't do anything if no string has been given
     if (isStringEmpty(this.state.text)) {
       NoticeSectionContainer.dispatchNotice(
         "Please provide a text to predict.",
-        NOTICE_TYPES.WARNING)
-      ;
+        NOTICE_TYPES.WARNING
+      );
       return;
     }
 
@@ -39,6 +42,7 @@ export default class PredictorToolContainer extends React.Component {
       this.setState(_ => {
         return {results};
       });
+      PredictorToolContainer.dispatchPredictionEvent();
       return;
     }
 
@@ -56,6 +60,7 @@ export default class PredictorToolContainer extends React.Component {
     this.setState(_ => {
       return {results: data};
     });
+    PredictorToolContainer.dispatchPredictionEvent();
   }
 
   static predictionFailureCallback(error) {

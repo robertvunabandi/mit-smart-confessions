@@ -40,6 +40,7 @@ export default class GeneratorToolContainer extends React.Component {
       this.setState(_ => {
         return {text_prediction};
       });
+      PredictorToolContainer.dispatchPredictionEvent();
       return;
     }
 
@@ -58,6 +59,7 @@ export default class GeneratorToolContainer extends React.Component {
     this.setState(_ => {
       return {text_prediction: data};
     });
+    PredictorToolContainer.dispatchPredictionEvent();
   }
 
   updateCache(data) {

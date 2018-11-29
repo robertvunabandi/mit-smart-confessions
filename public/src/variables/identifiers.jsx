@@ -62,6 +62,7 @@ const CLASSES = {
 // events from event listeners
 const EVENTS = {
   notice: "ev-notice",
+  prediction: "ev-prediction",
 };
 
 // the application name, which may or may not change
