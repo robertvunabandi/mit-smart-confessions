@@ -15,6 +15,7 @@ export default class GeneratorToolContainer extends React.Component {
       seed_text: null,
       length: null,
       cache: {}, // object mapping from text input to text prediction
+      is_predicting: false,
       text_prediction: null,
     };
   }
@@ -45,21 +46,30 @@ export default class GeneratorToolContainer extends React.Component {
     }
 
     // make the API call
+    this.setState({ is_predicting: true });
     API.get(
       "/api/generate",
       {seed_text: this.state.seed_text, length: (this.state.length || DEFAULT_LENGTH) + ""},
       this.predictionSuccessCallback.bind(this),
       // both generator and predictor work the same here
-      PredictorToolContainer.predictionFailureCallback.bind(this)
+      this.predictionFailureCallback.bind(this)
     );
   }
 
   predictionSuccessCallback(data) {
     this.updateCache(data);
     this.setState(_ => {
-      return {text_prediction: data};
+      return {text_prediction: data, is_predicting: false};
     });
     PredictorToolContainer.dispatchPredictionEvent();
+  }
+
+  predictionFailureCallback(error) {
+    NoticeSectionContainer.dispatchNotice(
+      `An error occurred when making the prediction: ${error.text}.`,
+      NOTICE_TYPES.ERROR
+    );
+    this.setState({is_predicting: false});
   }
 
   updateCache(data) {
@@ -120,7 +130,9 @@ function GeneratorToolView(props) {
         </span>
       </div>
       <div className={CLASSES.buttonPredictWrapper}>
-        <button onClick={props.predict}>Predict</button>
+        <button onClick={props.predict} disabled={props.is_predicting}>
+          {props.is_predicting ? "Predicting..." : "Predict"}
+        </button>
       </div>
       <LineBreakContainer />
       <div className={CLASSES.generatorPrediction}>

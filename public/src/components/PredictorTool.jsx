@@ -1,10 +1,10 @@
 import React from "react";
-import {isStringEmpty} from "../utilities/utils.jsx";
+import { isStringEmpty } from "../utilities/utils.jsx";
 import API from "../utilities/api.jsx";
-import {CLASSES, EVENTS} from "../variables/identifiers.jsx";
+import { CLASSES, EVENTS } from "../variables/identifiers.jsx";
 import PredictorReactionsContainer from "./PredictorReactions.jsx";
 import NoticeSectionContainer from "./NoticeSection.jsx";
-import {NOTICE_TYPES} from "./NoticeSection.jsx";
+import { NOTICE_TYPES } from "./NoticeSection.jsx";
 import LineBreakContainer from "./LineBreak";
 
 export default class PredictorToolContainer extends React.Component {
@@ -13,6 +13,7 @@ export default class PredictorToolContainer extends React.Component {
       text: null,
       last_text: null,
       cache: {},
+      is_predicting: false,
       results: PredictorReactionsContainer.defaultProps.results,
     };
   }
@@ -40,34 +41,36 @@ export default class PredictorToolContainer extends React.Component {
     if (this.state.text in this.state.cache) {
       const results = this.state.cache[this.state.text];
       this.setState(_ => {
-        return {results};
+        return { results };
       });
       PredictorToolContainer.dispatchPredictionEvent();
       return;
     }
 
     // make the API call
+    this.setState({ is_predicting: true });
     API.get(
       "/api/predict",
-      {text: this.state.text},
+      { text: this.state.text },
       this.predictionSuccessCallback.bind(this),
-      PredictorToolContainer.predictionFailureCallback.bind(this)
+      this.predictionFailureCallback.bind(this)
     );
   }
 
   predictionSuccessCallback(data) {
     this.updateCache(data);
     this.setState(_ => {
-      return {results: data};
+      return { results: data, is_predicting: false };
     });
     PredictorToolContainer.dispatchPredictionEvent();
   }
 
-  static predictionFailureCallback(error) {
+  predictionFailureCallback(error) {
     NoticeSectionContainer.dispatchNotice(
       `An error occurred when making the prediction: ${error.text}.`,
-      NOTICE_TYPES.ERROR)
-    ;
+      NOTICE_TYPES.ERROR
+    );
+    this.setState({ is_predicting: false });
   }
 
   updateCache(data) {
@@ -77,12 +80,12 @@ export default class PredictorToolContainer extends React.Component {
         return new_cache_;
       }, {});
       new_cache[prevState.text] = data;
-      return {cache: new_cache};
+      return { cache: new_cache };
     });
   }
 
   updateText(event) {
-  this.setState({text: event.target.value});
+    this.setState({ text: event.target.value });
   }
 
   render() {
@@ -90,6 +93,7 @@ export default class PredictorToolContainer extends React.Component {
       <PredictorToolView
         text={this.state.text}
         results={this.state.results}
+        is_predicting={this.state.is_predicting}
         predict={this.predict.bind(this)}
         updateText={this.updateText.bind(this)}
       />
@@ -112,11 +116,13 @@ function PredictorToolView(props) {
           onBlur={props.updateText}/>
       </div>
       <div className={CLASSES.buttonPredictWrapper}>
-        <button onClick={props.predict}>Predict</button>
+        <button onClick={props.predict} disabled={props.is_predicting}>
+          {props.is_predicting ? "Predicting..." : "Predict"}
+        </button>
       </div>
-      <LineBreakContainer />
+      <LineBreakContainer/>
       <PredictorReactionsContainer results={props.results}/>
-      <LineBreakContainer />
+      <LineBreakContainer/>
     </div>
   );
 }

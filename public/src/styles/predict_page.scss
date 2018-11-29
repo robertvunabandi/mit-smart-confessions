@@ -82,6 +82,10 @@
     padding: 0.35rem 1rem 0.5rem 1rem;
     border-radius: 4px;
   }
+  button[disabled], button[disabled=true] {
+    background-color: $c-BK-0500;
+    color: $c-WE-0700;
+  }
   padding-bottom: 1rem;
 }
 
