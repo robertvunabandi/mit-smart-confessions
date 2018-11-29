@@ -4,19 +4,17 @@ FOR PRESENTATION:
 - say that we're predicting "likes" and "loves" and all other reactions
 
 TO DO:
-- *** add a progress bar after one clicks on "predict" so that they don't keep clicking and spam the servers
 - ** write the content for remaining pages:
   - About
   - Understand
   - How it works
 - ** improve on the mobile XP. looks bad rn. Need to check multiple pages in small screen
-- ** when making a prediction, add an event listener to adjust the footer
-- ** create an event listener for when a prediction is made to reajust the navbar
-- ** update README
-- Update readme on github
 - break footer and header apart in CSS
 
 DONE:
+- *** add a progress bar after one clicks on "predict" so that they don't keep clicking and spam the servers
+- ** update README
+- ** when making a prediction, add an event listener to adjust the footer
 - ** remove the default highlighting of the home page when the current-page is not found in the navbar
 - ** add a link to the github repo on the navbar
 - push the server for predicting onto heroku or somewhere it can run
