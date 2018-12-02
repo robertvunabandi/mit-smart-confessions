@@ -58,6 +58,8 @@ const CLASSES = {
   generatorLength: "generator-length",
   generatorLengthLabel: "generator-length-label",
   generatorLengthInput: "generator-length-input",
+  // random modifiers
+  centerText: "m-center-text",
 };
 
 // events from event listeners
