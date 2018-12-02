@@ -4,7 +4,7 @@
 
 MIT Smart Confessions is a platform that uses machine learning to predict the number of reactions one would get from their confession and to generate confessions in such a way that it maximizes the number of reactions that confession would get.
 
-The website for this application can be found [here](https://mit-smart-confessions.herokuapp.com), and this is the Github repository for the website. In addition to this, we have another [Github repository](https://github.com/robertvunabandi/mit-smart-confessions-data) that handles the API part of this application.
+The website for this application can be found at [mit-smart-confessions.herokuapp.com](https://mit-smart-confessions.herokuapp.com), and this is the Github repository for the website. In addition to this, we have another [Github repository](https://github.com/robertvunabandi/mit-smart-confessions-data) that handles the API part of this application with API url [mit-smart-confessions-api.herokuapp.com](https://mit-smart-confessions-api.herokuapp.com).
 
 [![MIT Smart Confession Logo](public/src/assets/msc-logo.png)](https://mit-smart-confessions.herokuapp.com)
 
