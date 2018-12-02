@@ -22,7 +22,7 @@ function HomePageView() {
       <HorizontalSplitDivContainer>
         <div className={CLASSES.homePageBlock}>
           <h3>Confession Rater</h3>
-          Predict how popular your confession will be.
+          Find out how popular your confession will be.
           <br />
           <br />
           <a href={"/predict"}>
@@ -31,7 +31,8 @@ function HomePageView() {
         </div>
         <div className={CLASSES.homePageBlock}>
           <h3>Smart Confession Completion</h3>
-          Start writing, let our tool complete the confession to maximize popularity.
+          Start writing, let our tool complete the confession that maximize popularity
+          with the additional number of words you desire.
           <br />
           <br />
           <a href={"/generate"}>
@@ -44,14 +45,17 @@ function HomePageView() {
           <br />
           <br />
           <a href={"/understand"}>
-            View Explanations
+            See Explanations
           </a>
         </div>
       </HorizontalSplitDivContainer>
       <LineBreakContainer />
       <br />
       If interested, you can find out <a href={"/how-it-works"}>how this works</a> behind
-      the scene.
+      the scene or check out the Github repository for this
+      <a href={"https://github.com/robertvunabandi/mit-smart-confessions-website"}>website</a>{" "}
+      or for <a href={"https://github.com/robertvunabandi/mit-smart-confessions-data"}>our machine
+      learning API</a>.
       <br />
       <div id={IDS.homePageLogo}><img src={LOGO_SRC}/></div>
     </div>

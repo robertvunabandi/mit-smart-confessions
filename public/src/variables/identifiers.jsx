@@ -27,6 +27,7 @@ const CLASSES = {
   homePageBlock: "home-page-block",
   // navbar
   navbarOption: "navbar-option",
+  navbarOptionSeparator: "navbar-option-separator",
   navbarOptionActiveTab: "navbar-option-active-tab",
   // h-split
   horizontalSplitDivParent: "horizontal-split-div-parent",

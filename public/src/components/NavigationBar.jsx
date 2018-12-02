@@ -38,11 +38,17 @@ function NavBarView(props) {
             <a href={url}>{uppercaseFirstLettersSimpleString(name)}</a>
           </li>;
         })}
+        <li className={CLASSES.navbarOptionSeparator} key={991}>
+          <span></span>
+        </li>
+        <li className={CLASSES.navbarOption} key={991}>
+          <a href={"https://github.com/robertvunabandi/mit-smart-confessions-website"} target={"blank"}>Github:Website</a>
+        </li>
+        <li className={CLASSES.navbarOption} key={991}>
+          <a href={"https://github.com/robertvunabandi/mit-smart-confessions-data"} target={"blank"}>Github:API</a>
+        </li>
         <li id={IDS.navBarLogo} key={990}>
           <img src={LOGO_SRC}/>
-        </li>
-        <li className={"navbar-option"} key={991}>
-          <a href={"https://github.com/robertvunabandi/mit-smart-confessions-website"} target={"blank"}>onGithub</a>
         </li>
       </ul>
     </nav>
