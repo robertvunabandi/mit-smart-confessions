@@ -8,10 +8,12 @@ TO DO:
   - About
   - Understand
   - How it works
-- ** improve on the mobile XP. looks bad rn. Need to check multiple pages in small screen
+- * improve on the mobile XP. looks bad rn. Need to check multiple pages in small screen
 - break footer and header apart in CSS
 
 DONE:
+- ** add "s" to mit confessions and "s" to "scene"
+- *** generate page doesn't say "predicting...". fix that asap.
 - *** add a progress bar after one clicks on "predict" so that they don't keep clicking and spam the servers
 - ** update README
 - ** when making a prediction, add an event listener to adjust the footer
