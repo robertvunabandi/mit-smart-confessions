@@ -1,11 +1,13 @@
 @import "substyles/colors";
+@import "substyles/screen_sizes";
 
 .line-break {
+  @extend .block-align-center-responsive;
   padding: 1.25rem 1rem 0.75rem 1rem;
   display: block;
   div {
     display: block;
-    min-height: 3px;
+    min-height: 2px;
     border-radius: 100rem;
     background-color: $c-BK-0100;
   }
