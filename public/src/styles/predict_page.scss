@@ -3,30 +3,28 @@
 
 #root-init {
   #predict-page {
-    text-align: center;
   }
 }
 
 .predict-intro-text-wrapper {
-  text-align: center;
-  width: 60%;
+  @extend .block-align-center-responsive;
   margin: 0 auto;
   padding-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 .predict-text-wrapper {
-  text-align: center;
-  width: 60%;
+  @extend .block-align-center-responsive;
   margin: 0 auto;
   font-size: 1.12rem;
 }
 
 .text-area-predict-wrapper {
+  @extend .block-align-center-responsive;
+  display: block;
   margin: 0 auto;
-  text-align: center;
   textarea {
-    text-align: center;
+    width: 100%;
     margin: 0 auto;
     resize: none;
     height: 8rem;
@@ -41,39 +39,9 @@
   padding-bottom: 1rem;
 }
 
-/* medias to adjust the screen size for the textarea */
-@media (max-width: $screen-xs) {
-  .text-area-predict-wrapper {
-    textarea {
-      width: 92%;
-    }
-  }
-}
-@media (min-width: $screen-xs) and (max-width: $screen-md) {
-  .text-area-predict-wrapper {
-    textarea {
-      width: 80%;
-    }
-  }
-}
-@media (min-width: $screen-md) and (max-width: $screen-lg) {
-  .text-area-predict-wrapper {
-    textarea {
-      width: 64%;
-    }
-  }
-}
-@media (min-width: $screen-lg) {
-  .text-area-predict-wrapper {
-    textarea {
-      width: 54%;
-    }
-  }
-}
-
 .button-predict-wrapper {
+  @extend .block-align-center-responsive;
   margin: 0 auto;
-  text-align: center;
   button {
     background-color: $c-1-1000;
     color: white;
