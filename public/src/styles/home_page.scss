@@ -1,15 +1,17 @@
 #root-init {
   #home-page {
-    text-align: center;
     padding: 1rem 0;
     .home-page-block {
-      padding: 1rem 0.5rem 2rem 0.5rem;
+      * {
+        width: 100%;
+      }
+      padding: 1rem 1rem 1.5rem 1rem;
     }
     font-size: 1.12rem;
 
     #home-page-logo {
-      margin: 0 auto;
       text-align: center;
+      margin: 0 auto;
       img {
         max-height: 12rem;
       }
