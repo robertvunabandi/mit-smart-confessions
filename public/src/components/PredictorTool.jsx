@@ -101,11 +101,6 @@ export default class PredictorToolContainer extends React.Component {
   }
 }
 
-/*
-todo - check out https://github.com/buildo/react-autosize-textarea/tree/master/src
-yarn add react-autosize-textarea
-TextareaAutosize
-*/
 function PredictorToolView(props) {
   return (
     <div>
