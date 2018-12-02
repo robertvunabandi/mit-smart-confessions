@@ -14,7 +14,7 @@ export default class GeneratorToolContainer extends React.Component {
     return {
       seed_text: null,
       length: null,
-      cache: {}, // object mapping from text input to text prediction
+      cache: {}, // object mapping from (seedlength) to text prediction
       is_predicting: false,
       text_prediction: null,
     };
@@ -36,8 +36,8 @@ export default class GeneratorToolContainer extends React.Component {
     }
 
     // if the result is in the cache, just set that as the prediction
-    if ((this.state.seed_text + this.state.length) in this.state.cache) {
-      const text_prediction = this.state.cache[this.state.text];
+    if ((this.state.seed_text + "&&" +  this.state.length) in this.state.cache) {
+      const text_prediction = this.state.cache[this.state.text + "&&" + this.state.length];
       this.setState(_ => {
         return {text_prediction};
       });
@@ -78,7 +78,7 @@ export default class GeneratorToolContainer extends React.Component {
         new_cache_[key] = prevState.cache[key];
         return new_cache_;
       }, {});
-      new_cache[prevState.text + prevState.length] = data;
+      new_cache[prevState.text + "&&" + prevState.length] = data;
       return {cache: new_cache};
     });
   }
@@ -97,6 +97,7 @@ export default class GeneratorToolContainer extends React.Component {
         seed_text={this.state.seed_text}
         length={this.state.length}
         text_prediction={this.state.text_prediction}
+        is_predicting={this.state.is_predicting}
         predict={this.predict.bind(this)}
         updateSeedText={this.updateSeedText.bind(this)}
         updateLength={this.updateLength.bind(this)}
