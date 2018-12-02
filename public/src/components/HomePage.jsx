@@ -52,7 +52,7 @@ function HomePageView() {
       <LineBreakContainer />
       <br />
       If interested, you can find out <a href={"/how-it-works"}>how this works</a> behind
-      the scene or check out the Github repository for this
+      the scenes or check out the Github repository for this{" "}
       <a href={"https://github.com/robertvunabandi/mit-smart-confessions-website"}>website</a>{" "}
       or for <a href={"https://github.com/robertvunabandi/mit-smart-confessions-data"}>our machine
       learning API</a>.
