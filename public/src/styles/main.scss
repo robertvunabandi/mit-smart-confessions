@@ -8,6 +8,7 @@
 
 // #B0D1F0 nice color for bkg for predict icons
 @import "substyles/colors";
+@import "substyles/screen_sizes";
 
 * {
   font-family: 'Niramit', sans-serif;
@@ -30,7 +31,6 @@ body {
     #root-init {
       .page-wrapper {
         padding: 1rem 1rem;
-        text-align: center;
       }
     }
   }
@@ -60,7 +60,6 @@ body {
       a {
         display: block;
         color: white;
-        text-align: center;
         padding: 0 0.5rem;
         text-decoration: none;
       }
@@ -99,7 +98,6 @@ body {
   position: relative;
   padding: 1.5rem;
   color: white;
-  text-align: center;
   font-weight: 700;
   * {
     color: white;
@@ -121,4 +119,12 @@ body {
       }
     }
   }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @extend .block-align-center-responsive;
+}
+
+.m-center-text {
+  text-align: center;
 }
