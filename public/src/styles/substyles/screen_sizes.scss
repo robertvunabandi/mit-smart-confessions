@@ -15,3 +15,39 @@ template below
 @media (min-width: $screen-md) and (max-width: $screen-lg) {}
 @media (min-width: $screen-lg) {}
 */
+
+.block-align-center-responsive {
+  margin: 0 auto;
+}
+
+
+@media (max-width: $screen-xxs) {
+  .block-align-center-responsive {
+    width: 96%;
+  }
+}
+@media (min-width: $screen-xxs) and (max-width: $screen-xs) {
+  .block-align-center-responsive {
+    width: 92%;
+  }
+}
+@media (min-width: $screen-xs) and (max-width: $screen-sm) {
+  .block-align-center-responsive {
+    width: 84%;
+  }
+}
+@media (min-width: $screen-sm) and (max-width: $screen-md) {
+  .block-align-center-responsive {
+    width: 80%;
+  }
+}
+@media (min-width: $screen-md) and (max-width: $screen-lg) {
+  .block-align-center-responsive {
+    width: 74%;
+  }
+}
+@media (min-width: $screen-lg) {
+  .block-align-center-responsive {
+    width: 64%;
+  }
+}
