@@ -1,0 +1,37 @@
+@import "colors";
+
+.link_normal {
+  text-decoration: none;
+  font-weight: 700;
+  color: $c-1-1000;
+}
+
+.link_hover {
+  color: $c-2-1000;
+  background-color: $c-2-0050;
+}
+
+.link_active {
+  color: $c-2-1000;
+  background-color: $c-2-0100;
+}
+
+.link_focus {
+  color: $c-2-1000;
+  background-color: $c-2-0200;
+}
+
+.link_wrapper {
+  a, a:link, a:visited {
+    @extend .link_normal;
+  }
+  a:hover {
+    @extend .link_hover;
+  }
+  a:active {
+    @extend .link_active;
+  }
+  a:focus {
+    @extend .link_focus;
+  }
+}
