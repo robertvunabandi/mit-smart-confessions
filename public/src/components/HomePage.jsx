@@ -15,7 +15,9 @@ function HomePageView() {
   return (
     <div id={IDS.homePage} className={CLASSES.pageWrapper}>
       <h1 className={CLASSES.centerText}>Welcome to MIT Smart Confessions</h1>
-      <p className={CLASSES.centerText}>We use machine learning to take confessions to the next level.</p>
+      <p className={CLASSES.centerText}>
+        We use machine learning to take confessions to the next level.
+      </p>
       <br/>
       <br/>
       <LineBreakContainer/>
