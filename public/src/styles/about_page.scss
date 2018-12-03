@@ -1,4 +1,26 @@
+@import "substyles/screen_sizes";
+
 #root-init {
   #about-page {
+    h1, h2, h3, h4, h5, h6 {
+      padding-bottom: 0.5rem;
+    }
+    p {
+      padding-bottom: 0.5rem;
+    }
+
+    .about-page-members-wrapper {
+      @extend .block-align-center-responsive;
+      p {
+        width: 100%;
+      }
+      .about-page-photo {
+        display: block;
+        max-width: 65%;
+        border-radius: 100%;
+        margin: 1.0rem auto 1.5rem auto;
+      }
+    }
+
   }
 }

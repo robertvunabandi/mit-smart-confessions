@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import {CLASSES} from "../variables/identifiers.jsx";
 import "../styles/horizontal_split_div.scss";
 
+
 export default class HorizontalSplitDivContainer extends React.Component {
   render() {
     const split_class = `${CLASSES.horizontalSplitDiv}-${this.props.children.length}`;
@@ -14,6 +15,11 @@ export default class HorizontalSplitDivContainer extends React.Component {
     );
   }
 }
+
+HorizontalSplitDivContainer.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
 
 function HorizontalSplitDivView(props) {
   const class_name = !!props.className ? " " + props.className : "";

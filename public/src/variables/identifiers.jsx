@@ -26,6 +26,9 @@ const CLASSES = {
   // home page
   homePageBlock: "home-page-block",
   homePageBlockWrapper: "home-page-block-wrapper",
+  // about page
+  aboutPageMembersWrapper: "about-page-members-wrapper",
+  aboutPagePhoto: "about-page-photo",
   // navbar
   navbarOption: "navbar-option",
   navbarOptionSeparator: "navbar-option-separator",
