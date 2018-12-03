@@ -9,6 +9,7 @@
 // #B0D1F0 nice color for bkg for predict icons
 @import "substyles/colors";
 @import "substyles/screen_sizes";
+@import "substyles/links";
 
 * {
   font-family: 'Niramit', sans-serif;
@@ -29,6 +30,7 @@ body {
      * navigation bar and the footer.
      */
     #root-init {
+      @extend .link_wrapper;
       .page-wrapper {
         padding: 1rem 1rem;
       }

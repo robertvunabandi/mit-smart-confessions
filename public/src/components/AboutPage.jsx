@@ -11,7 +11,7 @@ export default class AboutPageContainer extends React.Component {
 function AboutPageView() {
   return (
     <div id={IDS.aboutPage} className={CLASSES.pageWrapper}>
-      <h1>Work in Progress...</h1>
+      <h1>About MIT Smart Confessions</h1>
     </div>
   );
 }
