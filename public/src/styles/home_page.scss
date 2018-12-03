@@ -1,17 +1,27 @@
+@import "substyles/screen_sizes";
+
 #root-init {
   #home-page {
     padding: 1rem 0;
-    .home-page-block {
-      * {
-        width: 100%;
+
+    .home-page-block-wrapper {
+      @extend .block-align-center-responsive;
+
+      .home-page-block {
+        * {
+          width: 100%;
+        }
+
+        padding: 1rem 1rem 1.5rem 1rem;
       }
-      padding: 1rem 1rem 1.5rem 1rem;
+
+      font-size: 1.12rem;
     }
-    font-size: 1.12rem;
 
     #home-page-logo {
       text-align: center;
       margin: 0 auto;
+
       img {
         max-height: 12rem;
       }

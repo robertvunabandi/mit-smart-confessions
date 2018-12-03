@@ -19,7 +19,7 @@ function HomePageView() {
       <br/>
       <br/>
       <LineBreakContainer/>
-      <HorizontalSplitDivContainer>
+      <HorizontalSplitDivContainer className={CLASSES.homePageBlockWrapper}>
         <div className={CLASSES.homePageBlock}>
           <h3>Confession Rater</h3>
           Find out how popular your confession will be.

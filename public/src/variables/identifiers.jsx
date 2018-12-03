@@ -25,6 +25,7 @@ const CLASSES = {
   pageWrapper: "page-wrapper",
   // home page
   homePageBlock: "home-page-block",
+  homePageBlockWrapper: "home-page-block-wrapper",
   // navbar
   navbarOption: "navbar-option",
   navbarOptionSeparator: "navbar-option-separator",

@@ -8,6 +8,7 @@ export default class HorizontalSplitDivContainer extends React.Component {
     const split_class = `${CLASSES.horizontalSplitDiv}-${this.props.children.length}`;
     return (
       <HorizontalSplitDivView
+        className={this.props.className}
         split_class={CLASSES.horizontalSplitDiv + " " + split_class}
         children={this.props.children} />
     );
@@ -15,8 +16,9 @@ export default class HorizontalSplitDivContainer extends React.Component {
 }
 
 function HorizontalSplitDivView(props) {
+  const class_name = !!props.className ? " " + props.className : "";
   return (
-    <div className={CLASSES.horizontalSplitDivParent}>
+    <div className={CLASSES.horizontalSplitDivParent + class_name}>
       {props.children.map((child, index) => {
         return (
           <div
