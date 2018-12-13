@@ -37,7 +37,8 @@ router.get("/generate", function (req, res) {
  * GET /understand
  **/
 router.get("/understand", function (req, res) {
-  res.render("understand", { title: getPageTitle("Understand") });
+  res.redirect("https://medium.com/mitafricans/mit-smart-confessions-8d77fe867b8b");
+  // res.render("understand", { title: getPageTitle("Understand") });
 });
 
 /**
@@ -58,7 +59,8 @@ router.get("/privacy", function (req, res) {
  * GET /how-it-works
  **/
 router.get("/how-it-works", function (req, res) {
-  res.render("how-it-works", { title: getPageTitle("How It Works") });
+  res.redirect("https://medium.com/mitafricans/mit-smart-confessions-8d77fe867b8b");
+  // res.render("how-it-works", { title: getPageTitle("How It Works") });
 });
 
 /**
