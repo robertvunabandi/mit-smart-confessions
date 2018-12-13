@@ -14,7 +14,8 @@ const NAVBAR_OPTIONS = [
   { name: NAVBAR_NAMES.HOME, url: "/" },
   { name: NAVBAR_NAMES.PREDICT, url: "/predict" },
   { name: NAVBAR_NAMES.GENERATE, url: "/generate" },
-  { name: NAVBAR_NAMES.UNDERSTAND, url: "/understand" },
+  // removed temporarily in case we are back with an understand page
+  // { name: NAVBAR_NAMES.UNDERSTAND, url: "/understand" },
 ];
 
 class NavBarContainer extends React.Component {

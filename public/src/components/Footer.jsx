@@ -5,7 +5,7 @@ import {uppercaseFirstLettersSimpleString, isStringEmpty} from "../utilities/uti
 
 const FOOTER_OPTIONS = [
   { name: "about MIT Smart Confession", url: "/about" },
-  { name: "how it works", url: "/how-it-works" },
+  { name: "how it works", url: "https://medium.com/mitafricans/mit-smart-confessions-8d77fe867b8b", target: "blank" },
 ];
 
 class FooterContainer extends React.Component {
@@ -55,8 +55,13 @@ function FooterView(props) {
     <footer id={IDS.footer}>
       <ul>
         {FOOTER_OPTIONS.map((navbar_option_obj, index) => {
-          const { name, url } = navbar_option_obj;
+          const { name, url, target } = navbar_option_obj;
           // todo - should display icon in case of home page
+          if (!!target) {
+            return <li className={"footer-item"} key={index}>
+              <a href={url} target={"blank"}>{uppercaseFirstLettersSimpleString(name)}</a>
+            </li>;
+          }
           return <li className={"footer-item"} key={index}>
             <a href={url}>{uppercaseFirstLettersSimpleString(name)}</a>
           </li>;

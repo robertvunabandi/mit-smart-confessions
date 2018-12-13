@@ -46,7 +46,7 @@ function HomePageView() {
           Understand what makes some confessions more popular than others.
           <br/>
           <br/>
-          <a href={"/understand"}>
+          <a href={"/understand"} target={"blank"}>
             See Explanations
           </a>
         </div>
