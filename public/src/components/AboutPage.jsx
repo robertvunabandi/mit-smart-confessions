@@ -26,6 +26,11 @@ function AboutPageView() {
         interested in, and that is how MIT Smart Confessions started.
       </p>
       <p>
+        This was definitely a lot of fun, and I want to thank Jürgen Cito for joining me on this
+        project and making it possible. I wrote a <a href={"/how-it-works"}>blog post</a> about
+        this, so if you're interested, you can read it at that url.
+      </p>
+      <p>
         — Robert M. Vunabandi ('20)
       </p>
       <h2>
