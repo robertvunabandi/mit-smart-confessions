@@ -1,17 +1,12 @@
-FOR PRESENTATION:
-- don't assume most people don't know mit confessions
-- show parallel examples from both the page and the app
-- say that we're predicting "likes" and "loves" and all other reactions
-
 TO DO:
-- ** write the content for remaining pages:
-  - About
-  - Understand
-  - How it works
 - * improve on the mobile XP. looks bad rn. Need to check multiple pages in small screen
+- Maybe this will be more user friendly if we just show the highest predicted bucket
 - break footer and header apart in CSS
 
 DONE:
+- Add GAnalytics
+- How it works: Have a link to the medium blog and both github repos.
+- Understand: add observations taken, add also "more work in progress"
 - ** add "s" to mit confessions and "s" to "scene"
 - *** generate page doesn't say "predicting...". fix that asap.
 - *** add a progress bar after one clicks on "predict" so that they don't keep clicking and spam the servers
